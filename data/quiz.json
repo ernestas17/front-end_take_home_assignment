@@ -1,0 +1,136 @@
+{
+  "quizId": "weight-loss",
+  "title": "Quick Quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "text": "What is your goal?",
+      "options": [
+        { "value": "lose_weight", "label": "Lose weight" },
+        { "value": "improve_energy", "label": "Improve energy" },
+        { "value": "get_fit", "label": "Get fit" }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "number",
+      "text": "How many hours do you sleep per night?",
+      "visibleIf": [{ "questionId": "q1", "equals": "improve_energy" }],
+      "validation": { "min": 0, "max": 12 }
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "text": "Preferred plan length?",
+      "options": [
+        { "value": "short", "label": "2–4 weeks" },
+        { "value": "medium", "label": "4–8 weeks" },
+        { "value": "long", "label": "8–12 weeks" }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "number",
+      "text": "How many minutes per day can you dedicate to exercise?",
+      "validation": { "min": 0, "max": 180 }
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "text": "How active is your job/lifestyle?",
+      "options": [
+        { "value": "sedentary", "label": "Mostly sitting" },
+        { "value": "light_active", "label": "Lightly active" },
+        { "value": "active", "label": "Very active" }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "text": "Do you prefer working out at home or at the gym?",
+      "options": [
+        { "value": "home", "label": "Home" },
+        { "value": "gym", "label": "Gym" },
+        { "value": "no_preference", "label": "No preference" }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "text": "How many meals do you usually eat per day?",
+      "options": [
+        { "value": "1_2", "label": "1–2 meals" },
+        { "value": "3", "label": "3 meals" },
+        { "value": "4_plus", "label": "4+ meals" }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "text": "Do you struggle with cravings?",
+      "options": [
+        { "value": "often", "label": "Often" },
+        { "value": "sometimes", "label": "Sometimes" },
+        { "value": "rarely", "label": "Rarely" }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "text": "What type of diet approach appeals to you the most?",
+      "options": [
+        { "value": "balanced", "label": "Balanced (everything in moderation)" },
+        { "value": "low_carb", "label": "Low-carb" },
+        { "value": "high_protein", "label": "High-protein" },
+        { "value": "plant_based", "label": "Plant-based" }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "number",
+      "text": "How many cups of water do you drink per day?",
+      "validation": { "min": 0, "max": 20 }
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "text": "How motivated do you feel right now?",
+      "options": [
+        { "value": "low", "label": "Not very motivated" },
+        { "value": "medium", "label": "Somewhat motivated" },
+        { "value": "high", "label": "Very motivated" }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "text": "Do you have any injuries or limitations?",
+      "options": [
+        { "value": "none", "label": "No limitations" },
+        { "value": "mild", "label": "Mild limitations" },
+        { "value": "severe", "label": "Severe limitations" }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "text": "How soon do you want to see results?",
+      "options": [
+        { "value": "asap", "label": "As soon as possible" },
+        { "value": "steady", "label": "Steady progress is fine" },
+        { "value": "no_rush", "label": "No rush, long-term changes" }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "text": "Would you like personalized meal recommendations?",
+      "options": [
+        { "value": "yes", "label": "Yes" },
+        { "value": "no", "label": "No" }
+      ],
+      "visibleIf": [{ "questionId": "q9", "equals": "balanced" }]
+    }
+  ]
+}
