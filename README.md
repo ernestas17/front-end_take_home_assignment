@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Install dependencies
 
-## Getting Started
+npm install
 
-First, run the development server:
+#### or
 
-```bash
+yarn install
+
+## Run the development server
+
 npm run dev
-# or
+
+#### or
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features Implemented
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Display single-choice and number-type questions.
+- Automatically navigate to the next question on selection (for single-choice).
+- “Next” button for number-type questions, disabled if input is empty.
+- Progress bar showing current question out of total.
+- URL query (`?q=<index>`) syncs with current question, enabling back/forward browser navigation (with Tab keyboard button to navigate).
+- Input styling with custom fonts and RGBA-based borders.
+- Responsive layout with Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Next Steps / Future Improvements
 
-## Learn More
+- Animations for smoother transitions between questions.
+- Answer persistence to localStorage or backend so progress isn’t lost on refresh.
+- Results page summarizing answers at the end of the quiz.
+- Validation for number questions beyond min/max constraints.
+- Unit and integration tests for components and navigation logic.
+- Split QuizPageClient component to more components (like Button and etc.).
+- Add TypeScript types (and/or interfaces) where (`any`) used.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Technical Decisions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js + React for SSR, routing, and modern component architecture.
+- Tailwind CSS with custom fonts and arbitrary RGBA values for fast, responsive styling.
+- URL-based question index to enable browser back/forward navigation without additional state management libraries.
+- Conditional rendering for question visibility (`visibleIf`) to support dynamic quiz logic.
+- Local state (`useState`) for tracking answers and current question, simple and sufficient for single-user session.
