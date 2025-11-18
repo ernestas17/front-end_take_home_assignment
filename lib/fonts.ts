@@ -1,4 +1,3 @@
-// lib/fonts.ts
 import localFont from 'next/font/local';
 import { Roboto } from 'next/font/google';
 
