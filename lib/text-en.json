@@ -1,0 +1,25 @@
+{
+  "homepage": {
+    "headline": "Get back in shape",
+    "ctaButton": "Start The Quiz"
+  },
+  "placeholders": {
+    "numberInput": "Enter..."
+  },
+  "buttons": {
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish"
+  },
+  "alerts": {
+    "quizFinished": "Quiz finished!"
+  },
+  "labels": {
+    "of": "of"
+  },
+  "imagesAndIcons": {
+    "illustration": "Mother and kid",
+    "chevronLeft": "Chevron left",
+    "arrowRight": "Arrow right"
+  }
+}
